@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="static/styles/style.css">
+    
+    <script src="https://kit.fontawesome.com/240c369354.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
+    <title>Maroc - A Health App</title>
+</head>
+
+<body>
+
+    <div class="form">
+
+        <div class="login-form">
+            <!--CANCEL FORM BTN-->
+            <a href="index" class="form-cancel">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <!--END CANCEL FORM BTN-->
+            <strong>Forgot Password</strong> 
+            {% for message in messages %}
+            <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="padding-left:7px;padding-right:7px;border:none;background:transparent;position:absolute;right:0;margin-right:20px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endfor %}
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" placeholder="Enter your username" name="username" id="username" required>
+                <input type="submit" value="Change Password" id="forgot">
+            </form>
+
+            <!--FORGET & SIGN UP BUTTON-->
+            <div class="form-btns">
+                <a href="signin" class="forget" id="fyp">Remember Your Password?</a>
+                <a href="signup" class="sign-up-btn" id="create">Create Account</a>
+            </div>
+            <!--END OF FORGET & SIGN UP-->
+        </div>
+        <!-- END OF LOGIN FORM -->
+    </div>
+
+    </div>
+    <script src="static/scripts/main.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+</body>
+

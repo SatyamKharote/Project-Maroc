@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+
+<section class="contact" id="contact">
+    <div class="heading">
+        <h3>Contact Us</h3>
+    </div>
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" style="background:gray;color:black;padding:20px" role="alert">
+        <strong>Messages : </strong>{{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="padding-left:7px;padding-right:7px;border:none;background:transparent;position:absolute;right:0;margin-right:20px">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    <div class="container">
+        <div class="contact-form">
+            <div class="row">
+                <form method="post" action="">
+                    {% csrf_token %}
+                <div class="col-md-5">
+                    <input type="text" name="name" placeholder="Your name..." required>
+                    <input type="email" name="email" placeholder="Email..." required>
+                    <input type="text" name="problem" placeholder="Problem..." required>
+                </div>
+                <div class="col-md-7">
+                    <textarea placeholder="Message..." name="desc"></textarea>
+                </div>
+                <input type="submit" value="Send message" class="btn">
+            </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+{% endblock body %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+{% block body %}
+<div class="how-section1">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Welcome to Maroc,</h1>
+
+            <p>Maroc is a nutrition consulting website based in India that aims to help clients manage chronic health issues such as weight gain, diabetes, PCOS, and thyroid through personalized diet protocols.<br><br>
+
+            Our team of experienced nutritionists work closely with clients to develop a tailored plan that addresses their specific needs and goals. We believe that proper nutrition is key to achieving and maintaining a healthy lifestyle, and we are dedicated to helping our clients achieve their best health.
+            <br><br>
+            <b style="font-weight:800;font-family:'Mukta';">Our services include</b>
+            <ul>
+                <li>Weight loss consulting</li>
+                <li>PCOS management</li>
+                <li>Diabetes management</li>
+                <li>Thyroid management</li>
+            </ul>
+            </p>
+            <input type="submit" class="login-btn" value="Get Started" id="start" onclick="window.location='signup';" >
+        </div>
+        <div class="col-md-6 how-img">
+            <img src="static/images/body.png" class="" alt="" />
+        </div>
+    </div>
+</div>
+{% endblock body %}

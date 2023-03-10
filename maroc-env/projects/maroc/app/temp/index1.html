@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="static/styles/style.css">
+    
+    <script src="https://kit.fontawesome.com/240c369354.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
+    <title>Maroc - A Health App</title>
+</head>
+
+<body>
+    <header class="header" id="myTopnav">
+        <!-- UPPER SOCIAL BAR -->
+        <div class="social-call">
+            <div class="social">
+                <a href="https://www.facebook.com/mohd.sanu1"><i class="fab fa-facebook"></i></a>
+                <a href="youtube.com/DjNaddy"><i class="fab fa-youtube"></i></a>
+                <a href="instagram.com/mohammad_sanu"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/Mohammadsanu_"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="phone">
+                <span>Call +91 000 000 0000</span>
+            </div>
+        </div>
+
+        <!-- END OF UPPER SOCIAL BAR -->
+
+        <div class="container">
+            <div class="row v-center">
+
+                <div class="header-item item-left">
+                    <div class="logo">
+                        <a href="">Maroc</a>
+                    </div>
+                </div>
+                <div class="header-item item-center">
+                    <nav class="menu">
+                        <ul class="menu-main">
+                            <li>
+                                <a href="" id="home">Home</a>
+                            </li>
+                            <li>
+                                <a href="" class="wieghtloss">Weightloss</a>
+                            </li>
+                            <li>
+                                <a href="" id="pcos">PCOS</a>
+                            </li>
+                            <li>
+                                <a href="" id="thy">Thyroid</a>
+                            </li>
+                            <li>
+                                <a href="" id="db">Diabetes</a>
+                            </li>
+                            <li>
+                                <a href="" id="db">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="" id="db">About us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="header-item item-right">
+                    <a href="#" class="search">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="signin" class="user">
+                        <i class="far fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--SEARCH-->
+    <div class="search-bar">
+        <div class="search-input">
+            <input type="text" placeholder="Search For Service">
+            <a href="#" class="search-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <!--END OF SEARCH-->
+
+    <!-- Sign up and Login Form -->
+
+    {% comment %} <div class="form">
+
+        <!-- LOGIN FORM -->
+        <div class="login-form">
+            <!--CANCEL FORM BTN-->
+            <a href="#  " class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+            <!--END CANCEL FORM BTN-->
+            <strong> <span class="effect">L</span>og <span class="effect">I</span>n</strong>
+            <form action="#">
+                <input type="email" placeholder="Exemple@gmail.com" name="email" id="email" required>
+                <input type="password" placeholder="Password" name="password" id="pass" required>
+                <input type="submit" value="Log In" id="login">
+            </form>
+
+            <!--FORGET & SIGN UP BUTTON-->
+            <div class="form-btns">
+                <a href="#" class="forget" id="fyp">Forget Your Password?</a>
+                <a href="#" class="sign-up-btn" id="create">Create Account</a>
+            </div>
+            <!--END OF FORGET & SIGN UP-->
+        </div>
+        <!-- END OF LOGIN FORM -->
+
+        <!-- SIGN UP FORM -->
+        <div class="sign-up-form">
+            <!--CANCEL FORM BTN-->
+            <a href="#" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+
+            <strong> <span class="effect">S</span>ign <span class="effect">U</span>p</strong>
+            <form action="/index" mathod="post">
+                {% csrf_token %}
+                <input type="text" placeholder="Full Name" name="fullname" id="name" required>
+                <input type="number" placeholder="Phone Number" name="phone" maxlength="10" id="phone" required>
+                <input type="email" placeholder="Exemple@gmail.com" name="email" id="email" required>
+                <input type="password" placeholder="Password" name="password" id="pass" required>
+                <input type="password" placeholder="Confirm Password" name="confirmpassword" id="pass" required>
+                <input type="submit" value="Sign up" id="signup">
+            </form>
+
+            <!--FORGET & SIGN UP BUTTON-->
+            <div class="form-btns">
+                <a href="#" class="already-account">Already Have Account?</a>
+            </div>
+            <!--END OF FORGET & SIGN UP-->
+        </div>
+        <!-- END OF SIGN UP FORM -->
+    </div> {% endcomment %}
+
+    <div class="how-section1">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Welcome to Maroc,</h1>
+
+                <p class="text-muted">Maroc is a nutrition consulting website based in India that aims to help clients manage chronic health issues such as weight gain, diabetes, PCOS, and thyroid through personalized diet protocols.<br><br>
+
+                Our team of experienced nutritionists work closely with clients to develop a tailored plan that addresses their specific needs and goals. We believe that proper nutrition is key to achieving and maintaining a healthy lifestyle, and we are dedicated to helping our clients achieve their best health.
+                <br><br>
+                <b>Our services include:</b>
+                <ul>
+                    <li>Weight loss consulting</li>
+                    <li>PCOS management</li>
+                    <li>Diabetes management</li>
+                    <li>Thyroid management</li>
+                </ul>
+                </p>
+                <button></button>
+                <input type="submit" class="login-btn" value="Get Started" id="start" onclick="window.location='signup';" >
+            </div>
+            <div class="col-md-6 how-img">
+                <img src="static/images/banner.svg" class="" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-wrapper">
+        <div id="progress-bar-container">
+            <ul>
+                <li class="step step01 active">
+                    <div class="step-inner">About You</div>
+                </li>
+                <li class="step step02">
+                    <div class="step-inner">Health Score</div>
+                </li>
+                <li class="step step03">
+                    <div class="step-inner">Health Background</div>
+                </li>
+            </ul>
+            <div id="line">
+                <div id="line-progress"></div>
+            </div>
+            <!-- progress-bar-container -->
+            <div id="progress-content-section">
+                <div class="section-content step1 active">
+                    <h2>Fill the following form for Weightloss Diet Plan</h2>
+                    <div class="about-you">
+                        <form action="#">
+                            <input type="text" placeholder="Full Name" name="fullname" id="name" required>
+                            <input type="number" placeholder="Phone Number" name="phone" maxlength="10" id="phone"
+                                required>
+                            <input type="email" placeholder="Exemple@gmail.com" name="email" id="email" required>
+
+
+                            <input type="submit" value="Submit" id="signup">
+                        </form>
+                    </div>
+                </div>
+                <div class="section-content step2">
+                    <h2>Check your health score by filling the details below</h2>
+                    <div class="getDetails">
+                        <form action="#">
+                            <input type="number" placeholder="Your Weight" name="yourWeight" id="yourWeight" required>
+                            <input type="number" placeholder="Your Height in centimeter" name="yourWeight"
+                                id="yourWeight" required>
+                            <input type="number" placeholder="Your Age" name="yourAge" id="yourAge" required>
+                            <input type="submit" value="Continue" id="continue">
+                        </form>
+                    </div>
+                </div>
+                <div class="section-content step3">
+                    <div class="container">
+                        <h2>Do you have any dietary preference?</h2>
+                        <form>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">Balanced Diet
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">Keto diet
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">Low Carb High Fat Diet
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">Vegan Diet
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="">I want my nutritionist to decide
+                            </label>
+                            <br/>
+                            <h2>How is your lifestyle?</h2>
+                            <select name="how_is_your_lifestyle" class="form-control" fdprocessedid="jhxbkl">
+                                <option>Sedentary (No movement)</option>
+                                <option>Active (Moderate movement)</option>
+                                <option>Very Active (High movement)</option>
+                            </select>
+                            <h2>your meal preferences?</h2>
+                            <select name="mealpreference" class="form-control" fdprocessedid="b7z66x">
+                                <option>Veg</option>
+                                <option>Non Veg</option>
+                                <option>Veg + Egg</option>
+                            </select>
+                            <input type="submit" value="Submit" id="finalSubmit">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- progress-wrapper -->
+    </div>
+    {% load static %}  
+    <script src="{% static '/scripts/main.js' %}" type="text/javascript"></script>  
+    {% comment %} <script src="static/scripts/main.js"></script> {% endcomment %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+</body>
+

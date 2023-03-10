@@ -1,0 +1,28 @@
+{% extends 'userbase.html' %}{% block title %}Weightloss{% endblock title %}
+{% block body %}
+<section class="contact" id="contact">
+    <div class="heading">
+        <h3>Weightloss Diet Plan</h3><br><br>
+    </div>
+    <div class="container">
+        <div class="contact-form">
+            <div class="row">
+                <form method="post" action="">
+                {% csrf_token %}
+                <div style="
+                display: flex;
+                flex-direction: column;
+                justify-content: :space-between;margin-top:-300px">
+                    <input type="number" placeholder="Your Weight in kg..." name="weight" required min="20" max="200">
+                    <input type="number" placeholder="Your Height in cm..." name="height" required min="50" max="250">
+                    <input type="number" placeholder="Your Age" required min="1" max="90">
+                </div>
+                <input type="submit" value="Get Diet Plan" class="btn">
+            </form>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+{% endblock body %}

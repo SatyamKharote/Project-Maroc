@@ -1,0 +1,174 @@
+{% extends 'userbase.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+{% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" style="background:gray;color:black;padding:20px" role="alert">
+        <strong>Messages : </strong>{{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="padding-left:7px;padding-right:7px;border:none;background:transparent;position:absolute;right:0;margin-right:20px">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    <section class="home" id="home">
+
+        <div class="swiper home-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide" style="background:url(static/images/BG-1.jpg) no-repeat;">
+                    <div class="content">
+                        <span><h4>Welcome, {{username}}</h4></span><br>
+                        <span>Explore our services</span>
+                        <h3>Weight Loss</h3>
+                        <a href="weightloss" class="btn">Get started</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background:url(static/images/BG-2.jpg) no-repeat;">
+                    <div class="content">
+                        <span>our services</span>
+                        <h3>PCOS</h3>
+                        <a href="notavailable" class="btn">Get started</a>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background:url(static/images/BG-3.jpg) no-repeat;">
+                    <div class="content">
+                        <span>our services</span>
+                        <h3>Diabetes</h3>
+                        <a href="notavailable" class="btn">Get started</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background:url(static/images/BG-4.jpg) no-repeat;">
+                    <div class="content">
+                        <span>our services</span>
+                        <h3>Thyroid</h3>
+                        <a href="notavailable" class="btn">Get started</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+
+    </section>
+    <section class="food" id="service">
+
+        <div class="heading">
+            <h3>our services</h3>
+        </div>
+
+        <div class="swiper food-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide" data-name="food-1">
+                    <img src="static/images/weightloss-body.jpg" alt="" style="border: 1px solid #111; border-radius:50%;"
+                        class="circular--square">
+                    <h3>Weightloss</h3>
+                    <a href="weightloss" class="btn">Learn More</a>
+                </div>
+
+                <div class="swiper-slide slide" data-name="food-2">
+                    <img src="static/images/pcos.webp" alt="" class="circular--square">
+                    <h3>PCOS</h3>
+                    <a href="notavailable" class="btn">Learn More</a>
+                </div>
+
+                <div class="swiper-slide slide" data-name="food-3">
+                    <img src="static/images/diabetes.png" alt="" class="circular--square">
+                    <h3>Diabetes</h3>
+                    <a href="notavailable" class="btn">Learn More</a>
+                </div>
+
+                <div class="swiper-slide slide" data-name="food-4">
+                    <img src="static/images/thyroid.png" alt="">
+                    <h3>Thyroid</h3>
+                    <a href="notavailable" class="btn">Learn More</a>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    <!-- food section ends  -->
+
+    <!-- food preview section starts -->
+
+
+    <!-- home section ends  -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+
+        <div class="image">
+            <img src="static/images/about.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3 class="title">Welcome to Maroc</h3>
+            <p>Maroc is Nutrition Consulting Company that helps clients with Weight Loss and better manage their PCOS,
+                diabetes, and thyroid through a Personalized Diet Protocol.</p>
+            <!-- <a href="#" class="btn">read more</a> -->
+            <p>At Maroc we provide, </p>
+            <div class="icons-container">
+                <div class="icons">
+                    <img src="static/images/personal-care.png" alt="">
+                    <h3 style="font-weight: bold; color: #cd9452">Personalized Care</h3>
+                </div>
+                <div class="icons">
+                    <img src="static/images/diet-plan.png" alt="">
+                    <h3 style="font-weight: bold; color: #cd9452">Dietary Protocol</h3>
+                </div>
+                <div class="icons">
+                    <img src="static/images/life-style.png" alt="">
+                    <h3 style="font-weight: bold; color: #cd9452">Lifestyle changes</h3>
+                </div>
+                <div class="icons">
+                    <img src="static/images/recomen.png" alt="">
+                    <h3 style="font-weight: bold; color: #cd9452">Recommendation</h3>
+                </div>
+                <!-- <div class="icons">
+                    <img src="images/protocol.png" alt="">
+                    <h3>Protocols</h3>
+                </div> -->
+            </div>
+        </div>
+
+    </section>
+    
+<section class="contact" id="contact">
+    <div class="heading">
+        <h3>Contact Us</h3>
+    </div>
+    <div class="container">
+        <div class="contact-form">
+            <div class="row">
+                <form method="post" action="">
+                    {% csrf_token %}
+                <div class="col-md-5">
+                    <input type="text" name="name" placeholder="Your name..." required>
+                    <input type="email" name="email" placeholder="Email..." required>
+                    <input type="text" name="problem" placeholder="Problem..." required>
+                </div>
+                <div class="col-md-7">
+                    <textarea placeholder="Message..." name="desc"></textarea>
+                </div>
+                <input type="submit" value="Send message" class="btn">
+            </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+    {% endblock body %}

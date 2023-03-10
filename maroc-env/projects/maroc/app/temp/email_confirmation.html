@@ -1,0 +1,22 @@
+{% autoescape off %}
+
+Welcome to Maroc login
+
+Dear {{name}},
+
+Thank you for registering with Macro: A health application. We are glad to have you onboard as a user.
+
+Your account has been successfully created and is now ready for use. To confirm your registration, please click on the link below:
+
+Confirmation link : http://{{domain}}{% url 'activate' uname=name %}
+
+Once you click on the link, your account will be fully activated and you can begin using all of the features that Macro has to offer.
+
+If you have any questions or concerns, please do not hesitate to contact us. We are always happy to help.
+
+Thank you for choosing Macro.
+
+Best regards,
+The Macro Team
+
+{% endautoescape %}

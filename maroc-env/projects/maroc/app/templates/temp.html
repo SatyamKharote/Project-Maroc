@@ -1,0 +1,31 @@
+{% extends 'userbase.html' %}
+{% block title %}Diet Plan{% endblock title %}
+{% block body %}
+    <p style="padding:30px;font-size:35px;font-weight:bold;">Your Diet Plan :)</p>
+    <div style="margin:20px;background-color:#cd9452;padding:20px;border-radius:20px;font-size:20px;">
+        <b>According to data provided by you, Your weight should be in between {{from}} to {{to}}</b>
+    </div>
+    <p style="padding:30px;font-size:25px;font-weight:bold;">Breakfast</p>
+
+    <div style="color:white;line-height:3.5;margin:20px;background-color:#2b2a33;padding:20px;border-radius:20px;font-size:20px;">
+        <b>{{diet.breakfast}}</b>
+    </div>
+    <p style="padding:30px;font-size:25px;font-weight:bold;">Lunch</p>
+    
+    <div style="color:white;line-height:3.5;margin:20px;background-color:#2b2a33;padding:20px;border-radius:20px;font-size:20px;">
+        <b>{{diet.lunch}}</b>
+    </div>
+    <p style="padding:30px;font-size:25px;font-weight:bold;">Snacks</p>
+    
+    <div style="color:white;line-height:3.5;margin:20px;background-color:#2b2a33;padding:20px;border-radius:20px;font-size:20px;">
+        <b>{{diet.Snakes}}</b>
+    </div>
+    <p style="padding:30px;font-size:25px;font-weight:bold;">Dinner</p>
+    
+    <div style="color:white;line-height:3.5;margin:20px;background-color:#2b2a33;padding:20px;border-radius:20px;font-size:20px;">
+        <b>{{diet.Dinner}}</b>
+    </div>
+{% comment %} 
+        <b>{{ans}}</b>
+        <b>{{loss}}</b>
+        <p>{{diet}}</p> {% endcomment %} {% endblock body %}

@@ -1,0 +1,46 @@
+{% extends 'userbase.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+    <section class="food" id="service">
+
+        <div class="heading">
+            <h3>Our Services</h3>
+        </div>
+
+        <div class="swiper food-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide" data-name="food-1">
+                    <img src="static/images/weightloss-body.jpg" alt="" style="border: 1px solid #111; border-radius:50%;"
+                        class="circular--square">
+                    <h3>Weightloss</h3>
+                    <a href="weightloss" class="btn">Learn More</a>
+                </div>
+
+                <div class="swiper-slide slide" data-name="food-2">
+                    <img src="static/images/pcos.webp" alt="" class="circular--square">
+                    <h3>PCOS</h3>
+                    <a href="notavailable" class="btn">Learn More</a>
+                </div>
+
+                <div class="swiper-slide slide" data-name="food-3">
+                    <img src="static/images/diabetes.png" alt="" class="circular--square">
+                    <h3>Diabetes</h3>
+                    <a href="notavailable" class="btn">Learn More</a>
+                </div>
+
+                <div class="swiper-slide slide" data-name="food-4">
+                    <img src="static/images/thyroid.png" alt="">
+                    <h3>Thyroid</h3>
+                    <a href="notavailable" class="btn">Learn More</a>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    {% endblock body %}

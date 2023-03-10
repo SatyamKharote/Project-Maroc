@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Weightloss
+{% endblock title %}
+
+{% block body %}
+<div class="w3-container w3-display-middle" style="width:500px">
+    <div class="w3-container w3-orange w3-center w3-padding w3-round-large">
+    <h2><b>Weightloss Model</b></h2>
+  </div>
+    <br>
+    <form class="w3-container" method="post" action="">
+        {% csrf_token %}
+        <p>
+        <label>Enter Your Weight</label>
+        <input class="w3-input" type="number" name="weight"></p>
+        <p>
+        <label>Enter Your Height</label>
+        <input class="w3-input" type="number" name="height"></p>
+        <p>
+            <label>Enter Your Age</label>
+            <input class="w3-input" type="number" name="age"></p>
+        <p>
+        <input type="submit" value="Submit" class="w3-button w3-orange w3-round-large w3-padding">
+    </form>   
+</div>
+{% endblock body %}
